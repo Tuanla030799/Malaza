@@ -1,0 +1,19 @@
+include ../mixins/mixins.pug
+div.login 
+    div.container 
+        div.login-wrapper 
+            div.path 
+                +breadcrumb(['Home'], 'Đăng Nhập')
+            div.login__title 
+                span ĐĂNG NHẬP
+                a(href="register.html") 
+                    span.redirect-register Đăng ký 
+            form
+                div.form-wrapper 
+                    div.form__title.pb-4 KHÁCH HÀNG ĐĂNG KÝ
+                    label.mb-4 Nếu bạn có một tài khoản xin vui lòng đăng nhập
+                    +input-group('Địa chỉ email','email', 'email')
+                    +input-group('password','password', 'Password')
+                    div.form__action.mt-4
+                    button.button.button-paging Quên mật khẩu ?
+                    button.button.button-dark.ms-2(type='submit') Đăng nhập

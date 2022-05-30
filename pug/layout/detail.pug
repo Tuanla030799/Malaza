@@ -1,0 +1,62 @@
+include ../mixins/mixins.pug
+include ../data/product-detail.pug
+include ../componets/card/product-detail-card.pug
+include ../componets/sidebar/detail-sidebar.pug
+div.product-detail 
+    div.container 
+        div.product-detail-wrapper 
+            div.path 
+                +breadcrumb(['Home', 'Sản phẩm', 'Trang sức'],'Lắc tay')
+            div.row 
+                div.col-2
+                    div.product-detail__option
+                        img(src="../../assets/images/detail1.png", alt="")
+                div.col-10.col-lg-5 
+                    div.product-detail__image 
+                        div.img-container 
+                            img(src="../../assets/images/detail2.png", alt="") 
+                div.col-12.col-lg-5
+                    div.product-detail__about
+                        form.product-detail__form
+                            div.about__title=product.title
+                            div.about__brand=product.brand
+                            div.about__price
+                                span.after-price=product.afterPrice 
+                                span.pre-price=product.prePrice
+                            div.about__detail=product.detail
+                            div.about__text MÀU SẮC
+                                select.form-select(aria-label="Default select example")
+                                    each item, index in product.color
+                                        option=item
+                            div.about__text SIZE 
+                                select.form-select(aria-label="Default select example")
+                                    each item, index in product.size
+                                        option=item
+                            div.about__text SỐ LƯỢNG
+                            div.about__action
+                                button(type="submit").button.button-product Mua Hàng
+                                button.button.button-like 
+                                    i.fa-solid.fa-heart
+                                button.button.button-product
+                                    i.fas.fa-sync
+            div.row 
+                div.col-xl-9
+                    div.product-detail__info
+                        ul.info__list 
+                            li.info__link.info__link--active
+                                a(href="#")  
+                                    span ĐẶc ĐIỂM NỔI BẬT
+                            li.info__link.ms-3
+                                a(href="#")  
+                                    span THÔNG TIN SẢN PHẨM
+                            li.info__link.ms-3
+                                a(href="#")
+                                    span ĐÁNH GIÁ
+                        div.row 
+                            div.col-12 
+                                div.product-detail__highlight
+                                    each item, index in highlights
+                                        +product-detail-card(item)
+                div.col-3.d-none.d-xl-block 
+                    +product-detail-sidebar("Sản phẩm mua nhiều", productSolds)
+                    +product-detail-sidebar("Sản phẩm bán chạy", productBoughts)

@@ -1,0 +1,35 @@
+.product-detail__card {
+  @include flex($justify: space-between, $direction: row);
+  padding: 40px 0;
+  .card {
+    &__title {
+      font-size: $fs-base;
+      color: $text-black70;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    &__text {
+      font-size: $fs-s;
+      color: $text-gray100;
+    }
+
+    &__img {
+      width: 30%;
+    }
+
+    &__info {
+      width: 60%;
+    }
+  }
+}
+
+.product-detail__card:nth-child(even) {
+  @include flex($justify: space-between, $direction: row-reverse);
+
+  .card {
+    &__info {
+      text-align: right;
+    }
+  }
+}

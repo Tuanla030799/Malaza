@@ -1,0 +1,23 @@
+table {
+  max-width: 100%;
+  width: 100%;
+
+  th {
+    vertical-align: bottom;
+    font-size: $fs-xs;
+    font-weight: 700;
+    color: $text-black70;
+  }
+
+  td {
+    vertical-align: middle;
+    font-size: $fs-s;
+    font-weight: 400;
+    color: $text-black70;
+  }
+
+  th,
+  td {
+    text-align: center;
+  }
+}

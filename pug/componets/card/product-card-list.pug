@@ -1,0 +1,22 @@
+include ../../componets/rate.pug
+
+mixin card-list(product)
+    div.card.card--list
+        div.card__img(style="--aspect-ratio:1/1;")
+            img.card-img-top(src=product.src, alt="")
+        div.card-body.card__info
+            div.card__title=product.title
+            div.card__rate.d-flex
+                +rating(product.rate)
+                span.rate__text (4 lượt mua)
+            div.card__detail=product.text
+            div.card__price.py-3
+                span=product.sell
+                if product.price
+                    span.old-price.ms-2=product.price
+            div.card__button--list
+                button.button.button-product Mua Hàng
+                button.button.button-like 
+                    i.fa-solid.fa-heart
+                button.button.button-product
+                    i.fas.fa-sync

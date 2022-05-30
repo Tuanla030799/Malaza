@@ -1,0 +1,164 @@
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $text-black;
+}
+
+a:hover {
+  color: $text-green;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+i,
+span,
+a {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-roboto;
+  margin: 0px;
+}
+
+h1 {
+  font-size: $fs-8xl;
+}
+h2 {
+  font-size: $fs-7xl;
+}
+h3 {
+  font-size: $fs-5xl;
+}
+h4 {
+  font-size: $fs-2xl;
+}
+h5 {
+  font-size: $fs-l;
+}
+h6 {
+  font-size: $fs-base;
+}
+ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+p {
+  font-size: $fs-base;
+  font-weight: 400;
+  line-height: $lh-3xl;
+  margin: 0px;
+  text-align: justify;
+}
+
+[style*="--aspect-ratio"] > :first-child {
+  width: 100%;
+}
+
+[style*="--aspect-ratio"] > img {
+  height: auto;
+}
+
+@supports (--custom: property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+  }
+
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  font-size: $fs-s;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+
+    // breadcrumb icon
+    &:not(:last-child):after {
+      content: ">";
+      margin-right: 4px;
+      margin-left: 4px;
+    }
+
+    &:not(:last-child):hover {
+      color: $text-green;
+    }
+  }
+
+  &__link {
+    
+    &:hover {
+      color: $text-green;
+    }
+  }
+
+  &__link-current {
+    color: $text-green;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+.arrow-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 100%;
+}
+
+.arrow-container::before,
+.arrow-container::after {
+  content: "";
+  background-color: $bg-white;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid $bg-white;
+  border-right: 20px solid $bg-white;
+  border-top: 20px solid transparent;
+}

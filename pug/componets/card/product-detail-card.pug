@@ -1,0 +1,7 @@
+mixin product-detail-card(item)
+    div.product-detail__card
+        div.card__info 
+            div.card__title=item.title 
+            div.card__text=item.text
+        div.card__img
+            img(src=item.src, alt=item.alt)

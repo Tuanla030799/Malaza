@@ -1,0 +1,44 @@
+.blog-grid {
+  padding-top: 40px;
+
+  &__about {
+    font-size: $fs-xs;
+    font-weight: 600;
+    padding: 15px 0;
+    border-bottom: 1px solid $border-line;
+  }
+
+  &__text {
+    font-size: $fs-xs;
+    line-height: $fs-l;
+    padding: 10px 0;
+  }
+
+  &__author {
+    font-size: $fs-xs;
+    color: $text-black10;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-line;
+  }
+
+  &__other {
+    @include flex($justify: space-between, $align: center);
+    padding: 10px 0;
+
+    a {
+      font-size: $fs-xs;
+      line-height: $fs-l;
+      color: $text-black10;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+include ../data/about-us.pug
+div.about-us 
+    div.container 
+        div.about-us-wrapper
+            div.path 
+                +breadcrumb(['Home'], 'Về chúng tôi')
+            div.about-us__title VỀ CHÚNG TÔI
+            div.about.row  
+                div.col-lg-6 
+                    div.about__img 
+                        img(src="../../assets/images/about.png", alt="about us")
+                div.col-lg-6 
+                    div.about__info
+                        div.about__logo.d-none.d-lg-block 
+                            a(href=about.link)
+                                img(src=about.src, alt=about.alt)
+                        div.about__title=about.title
+                        div.about__text=about.text 
+                        div.about__other
+                            a(href="#")
+                                span Xem thêm 

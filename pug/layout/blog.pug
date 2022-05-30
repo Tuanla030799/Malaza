@@ -1,0 +1,18 @@
+include ../componets/page.pug
+include ../data/blog.pug
+include ../componets/card/blog-card-grid.pug
+div.blog 
+    div.container
+        div.blog-wrapper 
+            div.path 
+                +breadcrumb(['Home'], 'Blog')
+            div.blog__title BLOG
+            div.blog__page 
+                +paginate(3)
+            block blog-list
+                +blog-list()
+                    each cart, index in blogList 
+                        div.blog__item.col-6.col-lg-4
+                            +blog-grid(cart)
+            div.blog__page 
+                +paginate(3)

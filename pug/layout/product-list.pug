@@ -1,0 +1,8 @@
+extends ./product.pug
+
+block product-list
+    +product-list()
+        each product, index in productGrid
+            div.product__item.col-12
+                a(href="detail.html")
+                    +card-list(product)

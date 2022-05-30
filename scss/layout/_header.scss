@@ -1,0 +1,156 @@
+.header {
+  width: 100%;
+  height: 80px;
+  z-index: $z-sticky;
+  font-weight: 600;
+
+  &-wrapper {
+    @include flex($justify: space-between, $align: center);
+    height: 80px;
+    position: relative;
+  }
+
+  .logo {
+    @include flex($align: center);
+    height: 100%;
+    img {
+      height: 50px;
+    }
+  }
+
+  .icon {
+    @include flex($align: center);
+    height: 100%;
+
+    &__cart {
+      @include flex($align: center);
+      height: 100%;
+    }
+
+    &__cart:hover .mega-menu{
+      display: flex;
+    }
+  }
+
+  .mega-menu {
+    @include flex($justify: space-between, $align: center);
+    border: 2px solid $text-green;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    right: 0;
+    padding: 40px;
+    background-color: $bg-white;
+    animation: headerMenu ease-in 0.2s;
+    transform-origin: top;
+    display: none;
+
+    .menu {
+      &__list {
+        line-height: $lh-3xl;
+      }
+
+      &__title {
+        width: 100%;
+        font-size: $fs-s;
+        font-weight: 700;
+        color: $text-black70;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $border-line;
+        margin-bottom: 20px;
+      }
+
+
+      &__item {
+        font-size: $fs-xs;
+        color: $text-gray100;
+        font-weight: 400;
+      }
+    }
+
+    &__price {
+      @include flex($justify: space-between, $align: center);
+      width: 100%;
+      margin-top: 15px;
+      padding: 15px 0;
+      border-top: 1px solid $border-line;
+    }
+
+    &__total {
+      font-size: $fs-s;
+      color: $text-black70;
+    }
+  }
+
+  .mega-menu::after {
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;  
+    border-bottom: 10px solid $text-green;
+    top: -10px;
+    left: 42%;
+  }
+
+  .mega-menu--cart {
+    width: 200px;
+    padding: 5px 10px 15px 10px;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .mega-menu--cart::after {
+    left: 65%;
+  }
+
+  .card {
+    flex-direction: row;
+    height: 70px;
+    margin: 5px 0px;
+
+    &-title {
+      font-size: $fs-xs;
+      line-height: $lh-3xl;
+      color: $text-black70;
+      font-weight: 400;
+    }
+
+    &__price {
+      font-size: $fs-s;
+    }
+
+    &__img {
+      width: 70px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-body {
+      padding: 0 10px;
+    }
+  }
+
+  .card--mini:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+
+  @keyframes headerMenu {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

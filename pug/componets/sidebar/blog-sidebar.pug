@@ -1,0 +1,19 @@
+mixin blog-sidebar(newPostList,blogTagList) 
+    div.blog-sidebar
+        div.blog-sidebar__title BÀI VIẾT MỚI NHẤT
+        each post, index in newPostList
+            a(href="#")
+                div.post
+                    div.post__avatar(style="--aspect-ratio:1.8/1;")
+                        div.post__img
+                            img(src=post.src, alt=post.alt)
+                            div.arrow-container     
+                                div.arrow 
+                    div.post__infor 
+                        div.post__time=post.date 
+                        div.post__postby=post.postby 
+        div.blog-sidebar__title.mt-3 BLOG TAG
+        each tag, index in blogTagList
+            button.button.button-tag(class=tag.active === true ? "button-tag--dark" : "")=tag.name
+        div.blog-sidebar__title.mt-3 LATEST VIDEO
+        img.mt-2(src="../../../assets/images/video.png", alt="")

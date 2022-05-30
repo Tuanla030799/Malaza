@@ -1,0 +1,54 @@
+.product {
+  padding: 80px 0;
+
+  .path {
+    &-wrapper {
+      padding: 20px 0;
+      font-size: $fs-base;
+    }
+  }
+
+  &__content {
+    margin-top: 50px;
+  }
+
+  &__list {
+    width: 100% ;
+  }
+
+  &__items {
+    @include flex($justify: space-between, $align: center, $direction: column);
+  }
+
+  &__item {
+    margin-top: 10px;
+    position: relative;
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      height: 100%;
+      right: 10px;
+    }
+
+    a:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  &__card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+
+  &__page {
+    width: 100%;
+  }
+}

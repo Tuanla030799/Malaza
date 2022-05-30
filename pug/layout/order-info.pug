@@ -1,0 +1,18 @@
+include ../mixins/mixins.pug
+div.orderInfo 
+    div.container 
+        div.orderInfo-wrapper 
+            div.path 
+                +breadcrumb(['Home'], 'Thông tin đơn hàng')
+            div.orderInfo__title THÔNG TIN
+            form#formOrder(name="formOrder")
+                div.form__title THÔNG TIN CÁ NHÂN
+                +input-group('Họ tên','text','name')
+                +input-group('Địa chỉ','text','address')
+                +input-group('Email','email','email')
+                +input-group('Số điện thoại','text','phoneNumber')
+                div.form__action.mt-4
+                    button#ordersubmit.button.button-dark(type='submit') Đặt hàng
+                    button.button.button-dark
+                        i.fa-solid.fa-arrow-rotate-left
+                        span.ms-1 Quay lại

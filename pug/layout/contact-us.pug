@@ -1,0 +1,22 @@
+div.contact-us 
+    div.container 
+        div.contact-us-wrapper
+            div.path 
+                +breadcrumb(['Home'], 'Liên Hệ')
+            div.contact-us__title LIÊN HỆ
+            div.contact.row  
+                div.col-lg-6 
+                    div.contact__img 
+                        img(src="../../assets/images/map.png", alt="contact us")
+                div.col-lg-6 
+                    form.contact__form
+                        div.contact__title GỬI EMAIL CHO CHÚNG TÔI
+                        +input-group('Tên','name', 'name')
+                        +input-group('Email','email', 'email')
+                        div.form-group
+                            div.label 
+                                label.text-require(for="message") Tin Nhắn
+                            div.control 
+                                textarea.form-control(id="message",rows="8") 
+                        div.form__action.mt-4
+                            button.button.button-dark(type='submit') Gửi

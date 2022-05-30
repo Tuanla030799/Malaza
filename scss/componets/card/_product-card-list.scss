@@ -1,0 +1,39 @@
+.card {
+  &--list {
+    flex-direction: row;
+    padding: 20px 0;
+  }
+
+  &__img {
+    width: 30%;
+  }
+
+  &__info {
+    @include flex($justify: space-between, $direction: column);
+    width: 70%;
+  }
+
+  &__rate {
+    font-size: $fs-s;
+
+    i + i {
+      padding-left: 4px;
+    }
+  }
+
+  .rate__text {
+    margin-left: 8px;
+    color: $text-black60;
+  }
+
+  &__button--list {
+    @include flex($justify: center, $align: center);
+    display: flex;
+  }
+
+  &__detail {
+    color: $text-gray100;
+    font-size: $fs-s;
+    text-align: left;
+  }
+}

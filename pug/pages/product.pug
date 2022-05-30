@@ -1,0 +1,9 @@
+extends ../base/layout.pug
+
+block content
+    include ../layout/product.pug
+
+block js
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
+    script(src="../../js/product/product.js" type="module")
+    script(src="../../js/component/pagination.js" type="module")

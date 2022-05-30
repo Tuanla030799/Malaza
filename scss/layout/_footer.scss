@@ -1,0 +1,59 @@
+.footer {
+  background-color: $black;
+
+  .about {
+    padding-bottom: 25px;
+    border-bottom: 1px solid $border-color;
+
+    .block {
+      @include respond-to("tablet") {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+
+    &__list {
+      padding: 25px 0;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+      font-size: $fs-l;
+      line-height: $lh-6xl;
+      color: $text-gray30;
+    }
+
+    &__text {
+      display: flex;
+
+      a {
+        font-size: $fs-s;
+        display: flex;
+        color: $text-gray90;
+        line-height: $lh-6xl;
+      }
+
+      a:hover {
+        color: $text-green;
+      }
+
+      i {
+        margin-top: 8px;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .deep {
+    padding: 20px;
+
+    &-wrapper {
+      @include flex($justify: space-between, $align: center);
+    }
+
+    &__text {
+      font-size: $fs-xs;
+      color: $text-gray90;
+      line-height: $lh-3xl;
+    }
+  }
+}

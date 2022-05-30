@@ -1,0 +1,41 @@
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-weight: 400;
+  color: $text-black;
+}
+
+body {
+  font-family: $ff-opensans;
+}
+
+.text-bold {
+  font-weight: 700 !important;
+}
+
+.text-green {
+  color: $text-green !important;
+}
+
+.text-other {
+  color: $text-other !important;
+}
+
+.font12 {
+  font-size: $fs-xs;
+}
+
+.font14 {
+  font-size: $fs-s;
+}
+.font18 {
+  font-size: $fs-l;
+}
+.font20 {
+  font-size: $fs-xl;
+}

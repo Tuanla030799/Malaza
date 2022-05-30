@@ -1,0 +1,17 @@
+
+mixin paginate(totalPage)
+    div.page
+        ul.nav.nav-tabs.page__arrange
+            li.nav-item.button-paging
+                a.nav-link(aria-current="page" href="product.html") 
+                    i.fas.fa-th-large
+            li.nav-item.button-paging
+                a.nav-link(href="product-list.html")  
+                    i.fa-solid.fa-list
+        div.page__paging
+            button.button-paging 
+                i.fas.fa-caret-left
+            -for(let page = 0; page  < totalPage; page ++)
+                button.button-paging= page+1
+            button.button-paging 
+                i.fas.fa-caret-right

@@ -1,0 +1,63 @@
+.account {
+  padding: 80px 0;
+
+  .path {
+    padding: 20px 0;
+    font-size: $fs-base;
+    border-bottom: 1px solid $border-line;
+  }
+
+  &__title {
+    font-size: $fs-5xl;
+    color: $text-black70;
+    list-style: $lh-3xl;
+    padding: 25px 0;
+  }
+
+  .table {
+    th,
+    td {
+      border: 1px solid $border-line;
+    }
+
+    th {
+      padding: 15px 8px;
+      background-color: $border-line;
+    }
+
+    td {
+      padding: 12px 8px;
+    }
+  }
+
+  .table > :not(:first-child) {
+    border-top: none;
+  }
+
+  &__text {
+    padding: 35px 0;
+    border-bottom: 1px solid $border-line;
+    font-size: $fs-s;
+    color: $text-black70;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  &__infor {
+    display: flex;
+    padding-top: 20px;
+    font-size: $fs-s;
+    color: $text-black70;
+    width: 100%;
+
+    i {
+        margin-top: 6px;
+        padding-right: 16px;
+    }
+  }
+
+  &__name {
+      font-size: $fs-xl;
+      font-weight: 500;
+  }
+}

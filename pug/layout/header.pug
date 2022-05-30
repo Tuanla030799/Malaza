@@ -1,0 +1,29 @@
+include ../data/navlist.pug
+include ../componets/navbar.pug
+header.header.fixed-top.shadow
+    div.container
+        div.header-wrapper.row
+            div.logo.col-auto
+                a(href="index.html")
+                    img(src="../../assets/images/logo.png", alt="mandala")
+            div.nav.col-auto.d-none.d-lg-flex
+                +nav(navlist)
+                    div.mega-menu.row
+                        +product-menu("Dưỡng Da", cosmetic)
+                        +product-menu("Nước Hoa", perfume)
+                        +product-menu("Trang Sức", perfume)
+            div.icon.col-auto
+                div.icon__cart
+                    a.me-4(href="shopping-cart.html")
+                        i.fas.fa-shopping-cart
+                        div.mega-menu.mega-menu--cart
+                            each card, index in miniCards
+                                +mini-card(card)
+                            div.mega-menu__price
+                                span.mega-menu__total Tổng số
+                                span.card__price 480.000đ 
+                            div.button.button-dark Giỏ Hàng
+                a(data-bs-toggle='modal' href='#exampleModalToggle' role='button')
+                    i.fas.fa-search
+                a.ms-4.d-lg-none(href="#")
+                    i.fas.fa-bars 

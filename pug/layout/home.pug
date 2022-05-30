@@ -1,0 +1,92 @@
+include ../data/home.pug
+include ../mixins/mixins.pug
+include ../data/product.pug
+include ../componets/card/product-card-grid.pug
+include ../layout/newsletter-popup.pug
+
+div.home
+    +modal()
+    div.banner
+        div.container 
+            div.banner-wrapper
+                div.banner__left.ms-3
+                    img.banner__product(src="../../assets/images/inmage-banner.png", alt="")
+                    img.banner__green-vera(src="../../assets/images/text-banner.png", alt="")
+                    span.banner__text Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
+                    span.banner__price GIÁ CHỈ 750.000đ
+                    a.banner__buy(href="#") MUA HÀNG
+                div.banner__right
+                    img.banner__avatar(src="../../assets/images/avatar-banner.png", alt="")
+    div.discount 
+        div.container 
+            div.discount-wrapper.row  
+                div.discount__item.col-12.col-sm-4
+                    i.discount__icon.fas.fa-plane-departure
+                    span Miễn phí vận chuyển
+                div.discount__item.col-12.col-sm-4
+                    i.discount__icon.fas.fa-gift
+                    span Nhân ngay quà tặng trị giá 350.000đ
+                div.discount__item.col-12.col-sm-4
+                    i.discount__icon.fas.fa-star
+                    span Giảm 30% cho đơn hàng trên 5.000.000đ
+    div.image 
+        div.container 
+            +home-avatar(listImages)
+    div.idea 
+        div.container 
+            div.idea-wrapper.row
+                div.avatar.col-auto
+                    div.avatar-wrapper 
+                        img(src="../../assets/images/avatar.png", alt="")
+                div.idea__text.col-12.col-sm-8.col-md-6
+                    span.idea__content "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng hồng làm chủ đạo nhưng lại tạo ra sức hút kì lạ với những ai cần trên tay sản phẩm ấy với công nghệ cải tiến mới nhất, hãng Rohto"
+                    div.idea__info 
+                        span.idea__name  TUTILE 
+                        span.idea__position.ms-2 _Giám đóc phát triển sản phẩm
+                div.idea__bg 
+                    img(src="../../assets/images/background2-home.png", alt="")
+    div.product 
+        div.container-fluid
+            div.product-wrapper
+                +list-title(productTitle)
+                +list-category(category)
+                +product-list()
+                    each product, index in productList 
+                        div.product__item.col-12.col-sm-6.col-lg-3.col-xl-2.p-3
+                            +card-grid(product)
+    div.contact 
+        div.container
+            div.contact-wrapper 
+                +contact-link(contact)
+    div.block 
+        div.container
+            div.block-wrapper 
+                div.row 
+                    div.block__list.col-12.col-sm-6.col-lg-4 
+                        div.block__title VỀ CHÚNG TÔI 
+                        div.logo 
+                            a(href="#")
+                                img(src="../../assets/images/logo.png", alt="mandala")
+                        div.block__about GIỚI THIỆU CHUNG VỀ MỸ PHẨM MANDALA 
+                        div.block__text=about
+                        div.block__other
+                            a(href="#") Xem Thêm 
+                    div.block__list.col-12.col-sm-6.col-lg-4 
+                        div.block__title BLOG
+                        div.block__avatar
+                            img(src="../../assets/images/avatr-footer.png", alt="mandala")
+                        div.block__about REVIEW SON KEM BOURJOIS VELVET 
+                        div.block__text=blog
+                        div.block__other
+                            a(href="#") Đọc thêm 
+                            a(href="#") 23 Bình luận
+                    div.block__list.col-12.col-sm-6.col-lg-4 
+                        div.block__email 
+                            div.block__title GỬI EMAIL CHO CHÚNG TÔI 
+                            input.input(type="text", placeholder="Email của bạn")
+                            div.block__text.py-3 Gửi email để nhận được ưu đãi mới nhất
+                            button.button.button-dark Gửi
+                        div.block__tag
+                            div.block__title GỬI EMAIL CHO CHÚNG TÔI 
+                            each item, index in productTag
+                                button.button.button-tag(class=item.active === true ? "button-tag-success" : "")=item.name

@@ -1,0 +1,15 @@
+include ../../componets/rate.pug
+mixin product-detail-sidebar(title, items)
+    div.detail-sidebar 
+        div.detail-sidebar__title=title 
+        each item, index in items 
+            a(href=item.link)
+                div.product
+                    div.product__img
+                        img(src=item.img, alt=item.alt)
+                    div.product__info 
+                        div.product__title=item.title 
+                        div.product__rate.d-flex
+                            +rating(item.rate)
+                            span.rate__text (4 lượt mua)
+                        div.product__price=item.price

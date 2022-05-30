@@ -1,0 +1,17 @@
+mixin modal()
+    div.newsletter 
+        #exampleModalToggle.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel' tabindex='-1')
+            .modal-dialog.modal-dialog-centered
+                .modal-header
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-content
+                    .modal-body
+                        div.modal__img(style="--aspect-ratio:1;")
+                            img(src="../../assets/images/popupimg.png", alt="")
+                        div.modal__content
+                            form.modal__form
+                                div.modal__title GỬI EMAIL 
+                                div.modal__text Hãy gửi email của bạn liên hệ với chúng tôi để  tư vấn tốt nhất sự hài lòng của bạn là thành công của chúng tôi
+                                div.modal__input
+                                    input.input.input-radius(type="email" placeholder="Email của bạn...")
+                                button.button.button-email(type="submit") Gửi Email

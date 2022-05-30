@@ -1,0 +1,23 @@
+include ../mixins/mixins.pug
+div.register 
+    div.container 
+        div.register-wrapper 
+            div.path 
+                +breadcrumb(['Home'], 'Đăng ký')
+            div.register__title ĐĂNG KÝ
+            form
+                div.form__title THÔNG TIN CÁ NHÂN
+                +input-group('Tên trước','text','firstname')
+                +input-group('Tên sau','text','lastname')
+                +input-group('Email','email','email')
+                +input-group('Password','password','password')
+                div.form-group 
+                    label.ms-2(for="register") Đăng ký nhận bản tin
+                div.form__title.pt-2 THÔNG TIN ĐĂNG NHẬP
+                +input-group('Mật khẩu','password','Passwordlogin')
+                +input-group('Xác nhận mật khẩu','password','repassword')
+                div.form__action.mt-4
+                    button.button.button-dark(type='submit') Gửi
+                    button.button.button-dark
+                        i.fa-solid.fa-arrow-rotate-left
+                        span.ms-1 Quay lại

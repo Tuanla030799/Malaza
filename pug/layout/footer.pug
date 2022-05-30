@@ -1,0 +1,37 @@
+include ../data/footer.pug
+include ../mixins/mixins.pug
+
+footer.footer.shadow
+    div.about
+        div.container
+            div.about-wrapper.row
+                div.block.col-12.col-md-4
+                    ul.about__list
+                        span.about__title LIÊN Hệ VỚI CHÚNG TÔI
+                        li.about__text
+                            a(href="#")
+                                i.fas.fa-map-marker-alt.text-green
+                                span.about__text Tầng 4, Tòa nhà Hà Nội Group Số 442 Đội cấn, P.Cổng Vị, Q.Ba Đình, Hà nội 
+                        li.about__text
+                            a(href="#")
+                                i.fas.fa-phone-alt.text-green
+                                span.about__text (04) 6674 2332 
+                            a.ms-3(href="#")
+                                i.fas.fa-phone-alt.text-green
+                                span.about__text (04) 6674 2332 
+                        li.about__text
+                            a(href="#")
+                                i.fas.fa-phone-alt.text-green
+                                span.about__text (04) 6674 2332 
+                            a.ms-3(href="#")
+                                i.fas.fa-envelope.text-green
+                                span.about__text.text-green Suport@bizweb.vn
+                +footer-block(ship.title, ship.items)
+                +footer-block(support.title, support.items)
+                +footer-block(info.title, info.items)
+                +footer-block(account.title, account.items)
+    div.deep
+        div.container
+            div.deep-wrapper
+                div.deep__text © Copyright 2008-2014 DKT Techno
+                div.deep__card 

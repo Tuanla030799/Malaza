@@ -1,0 +1,42 @@
+include ../mixins/mixins.pug
+mixin accounts(boughtList)
+    div.account 
+        div.container 
+            div.account-wrapper 
+                div.path 
+                    +breadcrumb(['Home'], 'Tài khoản')
+                div.row
+                    div.col-sm-9
+                        div.account__history 
+                            div.account__title TÀI KHOẢN
+                            table.table.table-bordered
+                                thead 
+                                    tr
+                                        th Order
+                                        th Date 
+                                        th Tình trạng thanh toán
+                                        th Tổng
+                                        th Nợ
+                                tbody
+                                    each item, index in boughtList
+                                        tr
+                                            td=item.order
+                                            td=item.date 
+                                            td.text-danger=item.status 
+                                            td=item.total 
+                                            td=item.debt
+                    div.col-sm-3
+                        div.account__detail 
+                            span.account__text CHI TIẾT TÀI KHOẢN
+                            div.account__infor
+                                i.fa-solid.fa-user
+                                div.account__user
+                                    div.account__name Giangle
+                                    div.account__email Leanhgiang89@gmail.com
+                            div.account__infor
+                                i.fa-solid.fa-location-dot
+                                div.account__address
+                                    span Tòa nhà Hà Nội group 442 đội cấn, Ba Đình Hà Nội
+                            div.account__infor
+                                i.fa-solid.fa-phone
+                                div.account__phone (04) 37868904

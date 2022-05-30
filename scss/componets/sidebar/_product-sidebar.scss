@@ -1,0 +1,56 @@
+.sidebar {
+  &__title {
+    font-size: $fs-xl;
+    color: $text-black80;
+    padding: 10px 0;
+    border-bottom: 1px solid $border-line;
+  }
+
+  &__list {
+    color: $text-black80;
+    padding: 10px 0;
+    border-bottom: 1px solid $border-line;
+  }
+
+  &__item {
+    a {
+      @include flex($align: center);
+      font-size: $fs-s;
+    }
+
+    i {
+      font-size: 0.375rem;
+    }
+  }
+
+  &__text {
+    font-size: $fs-s;
+    padding: 20px 0;
+    color: $text-gray100;
+  }
+
+  &__tag {
+    padding: 20px 0;
+
+    button {
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-left: 0;
+    }
+
+    .button-tag--active {
+      background-color: $bg-dark;
+      color: $text-white;
+    }
+
+    .button + .button {
+      margin-left: 0;
+    }
+  }
+
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+}

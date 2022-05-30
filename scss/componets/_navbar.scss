@@ -1,0 +1,28 @@
+.nav {
+  background-color: transparent;
+  position: relative;
+
+  &__list {
+    font-weight: 600;
+    font-size: $fs-xs;
+  }
+
+  &__item {
+    @include flex($align: center);
+    height: 80px;
+    font-size: $fs-xs;
+    padding: 0 18px;
+
+    &--active {
+      color: $text-green;
+    }
+  }
+
+  &__item:hover {
+    color: $text-green;
+  }
+
+  &__item:hover .mega-menu{
+    display: flex;
+  }
+}

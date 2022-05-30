@@ -1,0 +1,285 @@
+.home {
+  .banner {
+    background-color: $bg-gray;
+
+    &-wrapper {
+      @include flex($justify: space-between, $align: flex-end, $wrap: nowrap);
+    }
+
+    &__left {
+      @include flex($justify: center, $align: center, $direction: column);
+      padding-bottom: 40px;
+      text-align: center;
+      @include respond-to("large") {
+        padding-top: 100px;
+        padding-bottom: 20px;
+      }
+    }
+
+    &__product {
+      @include respond-to("large") {
+        width: 80%;
+      }
+    }
+
+    &__text {
+      font-size: $fs-xl;
+      color: $text-other;
+      margin-top: 5px;
+    }
+
+    &__price {
+      font-size: $fs-9xl;
+      color: $text-green;
+      font-weight: 300;
+      margin-top: 5px;
+    }
+
+    &__buy {
+      text-decoration: underline;
+      font-size: $fs-l;
+      margin-top: 10px;
+    }
+
+    &__right {
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .discount {
+    &__item {
+      @include flex($justify: center, $align: center, $direction: column);
+      margin: 30px 0;
+      font-size: $fs-s;
+      line-height: $lh-xl;
+      color: $text-black80;
+      text-align: center;
+
+      @include respond-to("mobile") {
+        padding: 30px 50px;
+        margin: 0;
+        font-size: $fs-xl;
+      }
+    }
+
+    .discount__item + .discount__item {
+      border-left: 1px solid $border-line;
+
+      @include respond-to("mobile") {
+        border-top: 1px solid $border-line;
+      }
+    }
+
+    &__icon {
+      padding-bottom: 8px;
+      font-size: $fs-base;
+
+      @include respond-to("mobile") {
+        font-size: $fs-3xl;
+      }
+    }
+  }
+
+  .image {
+    &__item {
+      padding: 12px;
+
+      img {
+        width: 100vw;
+      }
+    }
+  }
+
+  .idea {
+    &-wrapper {
+      position: relative;
+      padding: 70px 0px;
+    }
+
+    .avatar {
+      &-wrapper {
+        height: 120px;
+        padding: 10px;
+        border-radius: 50%;
+        border: 2px solid $border-line;
+      }
+      img {
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    &__text {
+      @include flex($justify: space-between, $direction: column);
+    }
+
+    &__content {
+      font-size: $fs-base;
+      color: $text-black;
+    }
+
+    &__name {
+      color: $text-gray100;
+      font-weight: 300;
+    }
+
+    &__position {
+      color: $text-gray100;
+      font-size: $fs-s;
+    }
+
+    &__bg {
+      img {
+        position: absolute;
+        z-index: $z-negative;
+        top: 0;
+        right: 80px;
+        opacity: 0.8;
+
+        @include respond-to("tablet") {
+          right: 0;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  .product {
+    padding: 70px 0;
+    background-image: url(../../assets/images/background-home.png);
+    border-bottom: 1px solid $border-line;
+    border-top: 1px solid $border-line;
+
+    .text__list {
+      @include flex($justify: center, $align: center);
+    }
+    &__title {
+      font-family: $ff-utm;
+      font-size: $fs-l;
+      color: $text-gray20;
+
+      &--active {
+        position: relative;
+        color: $text-green;
+        font-size: $fs-7xl;
+      }
+
+      &--active::after {
+        @include bg($url: "../../assets/images/line.png");
+        content: "";
+        position: absolute;
+        top: 60px;
+        height: 15px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &__category {
+      font-size: $fs-s;
+      color: $text-gray;
+      padding: 50px 0;
+
+      &--active {
+        color: $text-green;
+      }
+    }
+
+    &__item:nth-child(1),
+    &__item:nth-child(6) {
+      opacity: 0.4;
+
+      @include respond-to("large") {
+        display: none;
+      }
+    }
+  }
+
+  .contact {
+    &-wrapper {
+      padding: 45px 0px;
+    }
+
+    &__link {
+      @include flex($justify: space-between, $align: center);
+    }
+
+    &__icon,
+    &__name {
+      font-size: $fs-xs;
+      opacity: 0.3;
+    }
+
+    &__name--active {
+      opacity: 1;
+    }
+  }
+
+  .block {
+    color: $text-black90;
+
+    &-wrapper {
+      padding-bottom: 80px;
+    }
+
+    &__title {
+      position: relative;
+      font-size: $fs-base;
+      font-weight: 700;
+      padding: 30px 0 45px 0;
+      text-align: center;
+
+      &::after {
+        @include bg($url: "../../assets/images/line.png");
+        content: "";
+        position: absolute;
+        top: 60px;
+        height: 15px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &__about {
+      font-size: $fs-xs;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+
+    &__text {
+      font-size: $fs-xs;
+      line-height: $fs-l;
+    }
+
+    &__avatar {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__other {
+      @include flex($justify: space-between, $align: center);
+      a {
+        margin-top: 15px;
+        font-size: $fs-xs;
+        line-height: $fs-l;
+        color: $text-black10;
+      }
+    }
+
+    &__email {
+      @include flex($justify: center, $align: center , $direction: column);
+    }
+
+    &__tag {
+      button {
+        margin: 10px 5px 0px;
+      }
+    }
+  }
+}

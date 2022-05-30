@@ -1,0 +1,41 @@
+.card {
+  border: none;
+
+  &-body {
+    text-align: center;
+  }
+
+  &__brand {
+    font-size: $fs-s;
+    font-weight: 700;
+    color: $text-gray10;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: $text-black;
+  }
+
+  &__price {
+    font-family: $ff-Lobster;
+    font-size: $fs-l;
+    line-height: $lh-xl;
+    color: $text-green;
+  }
+
+  .old-price {
+    font-size: $fs-s;
+    color: $text-gray10;
+  }
+
+  &__button {
+    @include flex($justify: center, $align: center);
+    z-index: $z-drawer;
+  }
+
+  img {
+    object-fit: contain;
+    border-bottom: 1px solid $border-line;
+  }
+}

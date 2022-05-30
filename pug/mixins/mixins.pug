@@ -1,0 +1,96 @@
+mixin footer-block(title, items)
+    div.block.col-12.col-md-2
+        ul.about__list
+            span.about__title=title
+            each item, index in items
+                li.about__text
+                    a(href=item.link)
+                        span.about__text=item.text
+
+mixin home-avatar(items)
+    div.image-wrapper.row 
+        each item, index in items
+            div.image__item.col-12.col-sm-6 
+                a(href=item.link)
+                    img.img-fluid(src=item.src, alt=item.alt) 
+
+mixin list-title(items)
+    div.row.justify-content-center
+        each item, index in items
+            div.text__list.col-12.col-md-auto
+                a(href=item.link)
+                    span.product__title(class=item.active === false ? "" : "product__title--active")=item.title
+
+mixin list-category(items)
+    div.row.justify-content-center
+        each item, index in items
+            div.text__list.col-auto
+                a(href=item.link)
+                    span.product__category(class=item.active === true ? "product__category--active" : "")=item.text
+
+mixin contact-link(items)
+    div.contact__link.row
+        each item, index in items
+            div.col-auto 
+                a(href=item.link) 
+                    i.contact__icon(class=item.icon)
+                    span.contact__name(class=item.active === true ? "product__name--active" : "")=item.name
+
+mixin product-list()
+    div.product__list.row
+        block
+
+mixin categorys(categories, jewels)
+    each category, index in categories
+        div.sidebar__list
+            ul(class=category.active === true ? "text-green" : "")=category.title
+                if category.active
+                    each jewel, index in jewels
+                        li.sidebar__item.py-2(data-value=jewel.name)
+                            a(href=jewel.link)
+                                i.fas.fa-circle.px-2
+                                span=jewel.name
+
+mixin breadcrumb(items, last)
+    .breadcrumb
+        ul.breadcrumb__list&attributes(attributes)
+            each item in items
+                li.breadcrumb__item
+                    if (items.length === 1)
+                        span.breadcrumb__link= item
+                    else
+                        a(href="#" title=item).breadcrumb__link= item
+            if last
+                li.breadcrumb__item
+                    span.breadcrumb__link-current= last
+            else
+
+mixin input-group(label , type = "text", id) 
+    div.form-group
+        div.label 
+            label.text-require(for=id)=label
+        div.control
+            input.input(type=type, id=id, name=id)
+
+mixin blog-list()
+    div.blog__list.row
+        block
+
+mixin product-menu(title, items)
+    div.col-auto
+        div.menu 
+            ul.menu__list
+                span.menu__title=title
+                each item, index in items
+                    li.menu__item 
+                        a(href=item.link)
+                            span=item.text
+
+mixin mini-card(item)
+    a(href=item.link)
+        div.card.card--mini
+            div.card__img(style="--aspect-ratio:1;")
+                img.card-img(src=item.img alt=item.alt)
+            div.card-body 
+                div.card-title=item.title
+                div.card__price=item.price

@@ -1,0 +1,22 @@
+mixin cart(carts)
+    div.shopping-cart 
+        div.container 
+            div.shopping-cart-wrapper 
+                div.path 
+                    +breadcrumb(['Home'], 'Tài khoản')
+                div.cart
+                    div.cart__title GIỎ HÀNG
+                    table.table.table-bordered.table-card
+                        thead 
+                            tr
+                                th Ảnh
+                                th Tên Sản Phẩm 
+                                th Giá
+                                th Số Lượng
+                                th Tổng Số
+                                th Xóa
+                        tbody.table-card__tbody
+                div.shopping-cart__action
+                    button.button.button-dark Tiếp Tục Mua Hàng
+                    button.button.button-dark.delete-product(data-toggle="modal" data-target="#exampleModal")  Xóa
+                    button.button.button-dark.button-update Cập Nhật

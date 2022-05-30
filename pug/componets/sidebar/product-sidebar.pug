@@ -1,0 +1,16 @@
+include ../../mixins/mixins.pug
+
+mixin product-sidebar(categories, fewels, tagList)
+    div.sidebar
+        div.sidebar__title 
+            i.fas.fa-bars
+            span.ms-2 DANH MỤC SẢN PHẨM
+        +categorys(categories, fewels)
+        div.sidebar__title.mt-3 SO SÁNH SẢN PHẨM
+        div.sidebar__text Bạn chưa có sản phẩm nào để so sánh
+        div.sidebar__title.mt-3 TAG SẢN PHẨM
+        div#product-filter.sidebar__tag
+            each item, index in tagList
+                button.button.button-tag.button-tag-product(data-value=item.name class=item.active === true ? "button-tag--active" : "")=item.name
+        div.sidebar__img
+            img(src="../../../assets/images/sidebar-img.png", alt="")

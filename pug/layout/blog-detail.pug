@@ -1,0 +1,27 @@
+include ../data/blog-detail.pug
+include ../componets/card/blog-card-grid.pug
+include ../componets/sidebar/blog-sidebar.pug
+div.blog-detail
+    div.container
+        div.blog-detail-wrapper 
+            div.path 
+                +breadcrumb(['Home'], 'Blog')
+            div.blog-detail__title BLOG
+            div.row 
+                div.blog-detail__sidebar.col-lg-3
+                    +blog-sidebar(newPostList, blogTagList)
+                div.blog-detail__item.col-lg-9
+                    +blog-grid(blogCard) 
+                    div.blog-detail__tag Tag: Men
+                    form.blog-detail__form
+                        div.form-wrapper 
+                            div.form__title.pb-4 ĐÓNG GÓP Ý KIẾN
+                            +input-group('Tên','name', 'name')
+                            +input-group('Email','email', 'email')
+                            div.form-group
+                                div.label 
+                                    label.text-require(for="idea") Ý Kiến
+                                div.control 
+                                    textarea.form-control(id="idea",rows="8") 
+                            div.form__action.mt-4
+                                button.button.button-dark(type='submit') Gửi Ý Kiến

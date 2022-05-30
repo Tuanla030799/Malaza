@@ -1,0 +1,109 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "link": "#",
+      "src": "../../assets/images/product1.png",
+      "brand": "TIFANY",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 4,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà"
+    },
+    {
+      "id": 2,
+      "link": "#",
+      "src": "../../assets/images/product2.png",
+      "brand": "DEBORA",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 3,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà"
+    },
+    {
+      "id": 3,
+      "link": "#",
+      "src": "../../assets/images/product3.png",
+      "brand": "TIFANY",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 5,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà"
+    },
+    {
+      "id": 4,
+      "link": "#",
+      "src": "../../assets/images/product4.png",
+      "brand": "DEBORA",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 5,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà",
+      "price": "450.000đ"
+    },
+    {
+      "id": 5,
+      "link": "#",
+      "src": "../../assets/images/produvt5.png",
+      "brand": "SARVON",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 5,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà"
+    },
+    {
+      "id": 6,
+      "link": "#",
+      "src": "../../assets/images/product6.png",
+      "brand": "TIFANY",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 5,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà"
+    },
+    {
+      "id": 7,
+      "link": "#",
+      "src": "../../assets/images/product4.png",
+      "brand": "DEBORA",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 5,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà",
+      "price": "450.000đ"
+    },
+    {
+      "id": 8,
+      "link": "#",
+      "src": "../../assets/images/produvt5.png",
+      "brand": "SARVON",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 5,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà"
+    },
+    {
+      "id": 9,
+      "link": "#",
+      "src": "../../assets/images/product6.png",
+      "brand": "DEBORA",
+      "title": "Mỹ Phẩm Châu Âu",
+      "sell": 355000,
+      "rate": 5,
+      "text": "tự hào được ghi là năm mà Tifany & Co là một trong những thương hiệu nổi tiếng được thành lập, bộ sưu tập mang tính biểu tượng này cung cấp một cái gập đàu với mọi khách hàng. Thông qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp , đường cong và đường nét mượt mà"
+    }
+  ],
+  "orders": [
+    {
+      "name": "le anh tuan",
+      "email": "changtraicodon.swan@gmail.com",
+      "address": "140 pho chua quynh",
+      "phone": "0976554422",
+      "productIds": [
+        1
+      ],
+      "createdAt": 1648524221116,
+      "id": 1
+    }
+  ]
+}

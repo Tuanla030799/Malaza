@@ -1,0 +1,116 @@
+.product-detail {
+  padding: 80px 0;
+  min-width: 50vh;
+
+  .path {
+    padding: 20px 0;
+    font-size: $fs-base;
+    border-bottom: 1px solid $border-line;
+  }
+
+  &__option {
+    @include flex($justify: center, $align: center);
+    padding: 80px 0;
+    height: 100%;
+  }
+
+  &__image {
+    height: 100%;
+    padding: 80px 0;
+
+    .img-container {
+      @include flex($justify: center, $align: center);
+      border: 1px solid $border-line;
+      height: 100%;
+    }
+  }
+
+  &__about {
+    padding: 80px 0;
+  }
+
+  .about {
+    &__title {
+      font-size: $fs-xl;
+      color: $border-color;
+    }
+
+    &__brand {
+      font-size: $fs-s;
+      color: $text-gray100;
+    }
+
+    &__price {
+      display: flex;
+      padding: 10px 0;
+
+      .pre-price {
+        font-size: $fs-3xl;
+        color: $text-gray100;
+        padding-top: 10px;
+        margin-left: 10px;
+      }
+
+      .after-price {
+        font-size: $fs-6xl;
+        color: $text-black;
+      }
+    }
+
+    &__detail {
+      font-size: $fs-s;
+      color: $text-gray100;
+      line-height: $lh-xl;
+      padding-bottom: 10px;
+    }
+
+    &__text {
+      font-size: $fs-s;
+      line-height: $lh-xl;
+      color: $text-black;
+      padding: 10px 0;
+    }
+  }
+
+  .form-select {
+    margin-top: 10px;
+    width: 70%;
+    font-size: $fs-s;
+    color: $text-gray100;
+  }
+
+  &__form {
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  &__info {
+    .info {
+      &__list {
+        width: 100%;
+        border-bottom: 1px solid $border-line;
+        padding: 15px 0;
+      }
+
+      &__link {
+        display: inline-block;
+        
+        a {
+          font-size: $fs-l;
+          font-weight: 700;
+          color: $text-gray100;
+        }
+      }
+
+      &__link--active {
+        a {
+          color: $text-black60;
+        }
+      }
+    }
+  }
+
+  &__highlight {
+    @include flex($justify: space-around, $direction: column);
+  }
+}

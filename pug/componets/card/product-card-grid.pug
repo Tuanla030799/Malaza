@@ -1,0 +1,18 @@
+
+mixin card-grid(product)
+    div.card
+        div(style="--aspect-ratio:231/267;")
+            img.card-img-top(src=product.src, alt="")
+        div.card-body
+            div.card__brand=product.brand
+            div.card__title.py-3=product.title
+            div.card__price
+                span=product.sell
+                if product.price
+                    span.old-price.ms-2=product.price
+        div.card__button
+            button.button.button-product Mua Hàng
+            button.button.button-like 
+                i.fa-solid.fa-heart
+            button.button.button-product
+                i.fas.fa-sync

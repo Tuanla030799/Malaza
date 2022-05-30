@@ -1,0 +1,29 @@
+include ../componets/sidebar/product-sidebar.pug
+include ../data/product.pug
+include ../componets/card/product-card-grid.pug
+include ../componets/page.pug
+include ../componets/card/product-card-list.pug
+
+div.product
+    block product-path
+        div.path
+            div.container 
+                div.path-wrapper
+                    +breadcrumb(['Home', 'Sản phẩm'], 'Trang sức')
+    block product-banner
+        div.banner 
+            div.banner-wrapper 
+                img(src="../../assets/images/product-banner.png", alt="")
+    block product-content
+        div.product__content
+            div.container 
+                div.row
+                    div.col-12.col-lg-3
+                        +product-sidebar(categories, fewels, tagList)
+                    div.product__items.col-12.col-lg-9
+                        div.product__page 
+                            +paginate(3)
+                        block product-list
+                            div#product-grid.product__list.row
+                        div.product__page 
+                            +paginate(3)

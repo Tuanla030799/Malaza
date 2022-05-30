@@ -1,0 +1,67 @@
+.blog-sidebar {
+  &__title {
+    font-size: $fs-xl;
+    color: $text-black80;
+    padding: 10px 0;
+    border-bottom: 1px solid $border-line;
+  }
+
+  a,
+  img {
+    width: 100%;
+  }
+
+  .post {
+    @include flex($align: center);
+    padding: 20px 0;
+    &__avatar {
+      width: 35%;
+    }
+
+    &__img {
+      
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .arrow-container {
+      height: 5px;
+    }
+
+    .arrow {
+      border-left: 5px solid $bg-white;
+      border-right: 5px solid $bg-white;
+      border-top: 5px solid transparent;
+    }
+
+    &__infor {
+      margin-left: 10px;
+    }
+
+    &__time {
+      font-size: $fs-base;
+      font-weight: 700;
+    }
+
+    &__postby {
+      font-size: $fs-s;
+      color: $text-gray100;
+    }
+  }
+
+  &__tag {
+    padding: 20px 0;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+  .button + .button {
+    margin-left: 0;
+  }
+}

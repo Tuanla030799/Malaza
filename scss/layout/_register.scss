@@ -1,0 +1,16 @@
+.register {
+  padding: 80px 0;
+
+  .path {
+    padding: 20px 0;
+    font-size: $fs-base;
+    border-bottom: 1px solid $border-line;
+  }
+
+  &__title {
+    font-size: $fs-5xl;
+    color: $text-black70;
+    list-style: $lh-3xl;
+    padding: 25px 0;
+  }
+}

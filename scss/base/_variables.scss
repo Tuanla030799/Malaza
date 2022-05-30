@@ -1,0 +1,105 @@
+// Root
+:root {
+  --ratio: 1;
+  --fs-xs: calc(0.75rem / var(--ratio));
+  --fs-s: calc(0.875rem / var(--ratio));
+  --fs-base: calc(1rem / var(--ratio));
+  --fs-l: calc(1.125rem / var(--ratio));
+  --fs-xl: calc(1.25rem / var(--ratio));
+  --fs-3xl: calc(1.5rem / var(--ratio));
+  --fs-2xl: calc(1.375rem / var(--ratio));
+  --fs-4xl: calc(1.625rem / var(--ratio));
+  --fs-5xl: calc(1.75rem / var(--ratio));
+  --fs-6xl: calc(1.875rem / var(--ratio));
+  --fs-7xl: calc(2.125rem / var(--ratio));
+  --fs-8xl: calc(2.5rem / var(--ratio));
+  --fs-9xl: calc(2.25rem / var(--ratio));
+}
+
+//Font Size
+$fs-xs: var(--fs-xs);
+$fs-s: var(--fs-s);
+$fs-l: var(--fs-l);
+$fs-xl: var(--fs-xl);
+$fs-base: var(--fs-base);
+$fs-2xl: var(--fs-2xl);
+$fs-3xl: var(--fs-3xl);
+$fs-4xl: var(--fs-4xl);
+$fs-5xl: var(--fs-5xl);
+$fs-6xl: var(--fs-6xl);
+$fs-7xl: var(--fs-7xl);
+$fs-8xl: var(--fs-8xl);
+$fs-9xl: var(--fs-9xl);
+
+// Font Family
+$ff-roboto: 'Roboto', sans-serif;
+$ff-opensans: 'Open Sans', sans-serif;
+$ff-utm: 'U TM', sans-serif;
+$ff-Lobster: 'Lobster', cursive;
+
+// Colors
+$white: #fff;
+$black: #000;
+$gray: #808080;
+$green: #779529;
+
+// Border Color
+$border-color: #494949;
+$boder-black: #c0c0c0;
+$border-line: #e6e6e6;
+$boder-button: #191919;
+
+//text-color
+$text-gray: #808080;
+$text-gray90: #494949;
+$text-gray20: #c1c1c1;
+$text-gray10: #b4b4b4;
+$text-gray30: #d1d1d1;
+$text-gray40: #34474f;
+$text-gray100: #737373;
+$text-black: #000000;
+$text-black90: #050505;
+$text-black80: #1a1a1a;
+$text-black60: #131313;
+$text-black70: #212121;
+$text-black10: #4b4b4b;
+$text-white: #ffffff;
+$text-green: #789629;
+$text-other: #6c3c33;
+$text-info: #2f86eb;
+$text-warning: #ffc021;
+$text-error: #ff623d;
+
+//background-color
+$bg-dark: #000;
+$bg-white: #fff;
+$bg-gray: #f1f1f1;
+
+// Line Height
+
+$lh-xs: 0.75rem;
+$lh-s: 0.875rem;
+$lh-l: 1.125rem;
+$lh-xl: 1.25rem;
+$lh-base: 1rem;
+$lh-2xl: 1.375rem;
+$lh-3xl: 1.5rem;
+$lh-4xl: 1.625rem;
+$lh-5xl: 1.75rem;
+$lh-6xl: 1.875rem;
+
+//z-index
+$z-negative: -1;
+$z-elevate: 1;
+$z-sticky: 100;
+$z-drawer: 200;
+
+// Responsive Variables
+$breakpoints: (
+  'small':  (min-width:768px),
+  'medium': (max-width:992px),
+  'large':  (max-width:1200px),
+  'mobile': (max-width:576px),
+  'tablet': (max-width:768px),
+) !default;
+

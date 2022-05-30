@@ -1,0 +1,13 @@
+.input {
+  outline: none;
+  border: 1px solid $border-line;
+  width: 100%;
+  line-height: $lh-l;
+  font-size: $fs-xs;
+  padding: 10px 15px;
+}
+
+.input-radius {
+  border-radius: 20px;
+  padding: 15px;
+}

@@ -1,0 +1,13 @@
+mixin blog-grid(card)
+    article.blog-grid
+        div.blog-grid__avatar(style="--aspect-ratio:1.8;")
+            div.blog-grid__img
+                img(src=card.src, alt=card.alt)
+                div.arrow-container     
+                    div.arrow
+        div.blog-grid__about=card.about
+        div.blog-grid__text=card.text
+        div.blog-grid__author=card.by
+        div.blog-grid__other
+            a(href="blog-detail.html") Đọc thêm 
+            a(href="#")=card.comment

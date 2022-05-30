@@ -1,0 +1,46 @@
+form {
+    padding: 50px;
+    background-color: $border-line;
+
+    &-group + &-group {
+        margin-top: 10px;
+    }
+
+    &__title {
+        font-size: $fs-l;
+        color: $text-black70;
+        font-weight: 400;
+        padding: 20px 0;
+    }
+
+    &__action {
+        @include flex($justify: space-between, $align: center);
+        width: 100%;
+    }
+
+    .label {
+        font-size: $fs-xs;
+        color: $text-black;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+    .text-require {
+        position: relative;
+    }
+
+    .input {
+        padding: 7px 15px;
+    }
+
+    .button-dark {
+        padding: 5px 10px;
+    }
+
+    .text-require::after {
+        content: "*";
+        position: absolute;
+        top: 0;
+        right: -9px;
+    }
+}

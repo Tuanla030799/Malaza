@@ -1,0 +1,50 @@
+@mixin flex(
+  $justify: start,
+  $align: start,
+  $direction: row,
+  $wrap: wrap,
+  $gap: 0
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  @if ($direction != "row") {
+    flex-direction: $direction;
+  }
+
+  flex-wrap: $wrap;
+  @if ($gap != 0) {
+    gap: $gap;
+  }
+}
+
+@mixin box($width, $height: $width, $radius: 0) {
+  width: $width;
+  height: $height;
+  @if ($radius != 0) {
+    border-radius: $radius;
+  }
+}
+
+@mixin bg($url, $repeat: no-repeat, $position: center, $size: contain) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+//response
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
